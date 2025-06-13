@@ -1,0 +1,79 @@
+{
+    "MongoDB Connection (Mongoose)": {
+      "prefix": "mongo-conn",
+      "body": [
+        "const mongoose = require('mongoose');",
+        "",
+        "mongoose.connect('mongodb://localhost:27017/yourdbname', {",
+        "  useNewUrlParser: true,",
+        "  useUnifiedTopology: true",
+        "})",
+        ".then(() => console.log('MongoDB connected'))",
+        ".catch((err) => console.error('MongoDB connection error:', err));"
+      ],
+      "description": "Connect to MongoDB using Mongoose"
+    },
+  
+    "Express REST API Route": {
+      "prefix": "express-route",
+      "body": [
+        "const express = require('express');",
+        "const router = express.Router();",
+        "",
+        "// @route   GET /api/sample",
+        "// @desc    Sample route",
+        "// @access  Public",
+        "router.get('/sample', (req, res) => {",
+        "  res.json({ message: 'API is working!' });",
+        "});",
+        "",
+        "module.exports = router;"
+      ],
+      "description": "Basic Express.js route structure"
+    },
+  
+    "React Functional Component": {
+      "prefix": "rfc",
+      "body": [
+        "import React, { useState } from 'react';",
+        "",
+        "const $1 = () => {",
+        "  const [state, setState] = useState(null);",
+        "",
+        "  return (",
+        "    <div>",
+        "      <h1>$1 Component</h1>",
+        "    </div>",
+        "  );",
+        "};",
+        "",
+        "export default $1;"
+      ],
+      "description": "React Functional Component with useState"
+    },
+  
+    "JWT Auth Middleware": {
+      "prefix": "jwt-auth",
+      "body": [
+        "const jwt = require('jsonwebtoken');",
+        "",
+        "module.exports = function (req, res, next) {",
+        "  const token = req.header('x-auth-token');",
+        "",
+        "  if (!token) {",
+        "    return res.status(401).json({ msg: 'No token, authorization denied' });",
+        "  }",
+        "",
+        "  try {",
+        "    const decoded = jwt.verify(token, 'your_jwt_secret');",
+        "    req.user = decoded.user;",
+        "    next();",
+        "  } catch (err) {",
+        "    res.status(401).json({ msg: 'Token is not valid' });",
+        "  }",
+        "};"
+      ],
+      "description": "JWT authentication middleware for Express"
+    }
+  }
+  

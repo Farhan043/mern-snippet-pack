@@ -1,0 +1,48 @@
+{
+  "name": "mern-snippet-pack",
+  "displayName": "MERN Snippet Pack",
+  "icon": "icon.png",
+  "description": "VS Code snippets for MERN stack developers – including MongoDB, Express, React, Node.js, JWT, and more.",
+  "version": "1.0.1",
+  "publisher": "habibcodes",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": ["Snippets"],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/react.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json.json"
+      }
+    ]
+  },
+  "keywords": [
+    "MERN",
+    "MongoDB",
+    "Mongoose",
+    "Express",
+    "React",
+    "Node",
+    "Snippets",
+    "JWT",
+    "Authentication",
+    "REST API",
+    "Boilerplate",
+    "VSCode",
+    "Fullstack"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Farhan043/mern-snippet-pack"
+  },
+  "license": "MIT"
+}
